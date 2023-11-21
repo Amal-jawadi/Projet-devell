@@ -160,7 +160,7 @@
            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Lunettes</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Femme</a></li>
+                <li><a class="dropdown-item" href="http://localhost/Site-Opticien/femme%20lunettes.php">Femme</a></li>
                 <li><a class="dropdown-item" href="#">Homme</a></li>
                 <li><a class="dropdown-item" href="#">Enfant</a></li>
               </ul> 
