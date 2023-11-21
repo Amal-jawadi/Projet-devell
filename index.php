@@ -151,25 +151,25 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="file:///C:/xampp/htdocs/Site-Opticien/Home.html">Acceuil</a>
+              <a class="nav-link" href="http://localhost/Site-Opticien/index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="file:///C:/xampp/htdocs/Site-Opticien/log%20in.html">Se connecter</a>
+              <a class="nav-link" href="http://localhost/Site-Opticien/log%20in.php">Log In</a>
             </li>
         
            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Lunettes</a>
+              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Glasses</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="http://localhost/Site-Opticien/femme%20lunettes.php">Femme</a></li>
-                <li><a class="dropdown-item" href="#">Homme</a></li>
-                <li><a class="dropdown-item" href="#">Enfant</a></li>
+                <li><a class="dropdown-item" href="http://localhost/Site-Opticien/femme%20lunettes.php">Women</a></li>
+                <li><a class="dropdown-item" href="#">Man</a></li>
+                <li><a class="dropdown-item" href="#">Kids</a></li>
               </ul> 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Lunettes de soleil</a>
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Sunglasses</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Femme</a></li>
-                  <li><a class="dropdown-item" href="#">Homme</a></li>
-                  <li><a class="dropdown-item" href="#">Enfant</a></li>
+                  <li><a class="dropdown-item" href="#">women</a></li>
+                  <li><a class="dropdown-item" href="#">Man</a></li>
+                  <li><a class="dropdown-item" href="#">Kids</a></li>
                 </ul> 
                 <li class="nav-item">
                     <a class="nav-link" href="#">Lentilles</a>

@@ -73,7 +73,8 @@
 }
 </style>
 <body>
-      <nav class="navbar navbar-expand-sm bg-light grey navbar-light grey">
+     
+<nav class="navbar navbar-expand-sm bg-light grey navbar-light grey">
       <div class="container-fluid">
         <img src="logo22.png" alt="Logo" style="width:90px;">
        
@@ -83,25 +84,25 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="file:///C:/xampp/htdocs/Site-Opticien/Home.html">Acceuil</a>
+              <a class="nav-link" href="http://localhost/Site-Opticien/index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="file:///C:/xampp/htdocs/Site-Opticien/log%20in.html">Se connecter</a>
+              <a class="nav-link" href="http://localhost/Site-Opticien/log%20in.php">Log In</a>
             </li>
         
            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Lunettes</a>
+              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Glasses</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Femme</a></li>
-                <li><a class="dropdown-item" href="#">Homme</a></li>
-                <li><a class="dropdown-item" href="#">Enfant</a></li>
+                <li><a class="dropdown-item" href="http://localhost/Site-Opticien/femme%20lunettes.php">Women</a></li>
+                <li><a class="dropdown-item" href="#">Man</a></li>
+                <li><a class="dropdown-item" href="#">Kids</a></li>
               </ul> 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Lunettes de soleil</a>
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Sunglasses</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Femme</a></li>
-                  <li><a class="dropdown-item" href="#">Homme</a></li>
-                  <li><a class="dropdown-item" href="#">Enfant</a></li>
+                  <li><a class="dropdown-item" href="#">women</a></li>
+                  <li><a class="dropdown-item" href="#">Man</a></li>
+                  <li><a class="dropdown-item" href="#">Kids</a></li>
                 </ul> 
                 <li class="nav-item">
                     <a class="nav-link" href="#">Lentilles</a>
@@ -133,7 +134,7 @@
                   <div class="card-body py-5 px-md-5">
                     <div class="row d-flex justify-content-center">
                       <div class="col-lg-8">
-                        <h2 class="fw-bold mb-5">Sign up now</h2>
+                        <h2 class="fw-bold mb-5">Sign up Now</h2>
                         <form>
                           <!-- 2 column grid layout with text inputs for the first and last names -->
                           <div class="row">
