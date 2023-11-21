@@ -105,7 +105,7 @@
                   <li><a class="dropdown-item" href="#">Kids</a></li>
                 </ul> 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Lentilles</a>
+                    <a class="nav-link" href="#">Lentilless</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Marques</a>
