@@ -167,7 +167,7 @@ div.desc {
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="http://localhost/Site-Opticien/femme%20lunettes.php">Women</a></li>
                 <li><a class="dropdown-item" href="http://localhost/Site-Opticien/homme%20lunettes.php">Man</a></li>
-                <li><a class="dropdown-item" href="#">Kids</a></li>
+                <li><a class="dropdown-item" href="http://localhost/Site-Opticien/kids%20lunettes.php">Kids</a></li>
               </ul> 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Sunglasses</a>
