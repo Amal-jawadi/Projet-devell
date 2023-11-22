@@ -39,7 +39,7 @@ $result = $conn->query($sql);
 p {
   text-align: center;
   font-size: 20px;
-  color: rgb(122, 62, 62);
+  color: #5e60f0;
 }     
 div.gallery {
   border: 1px solid #ccc;
@@ -166,7 +166,7 @@ div.desc {
               <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Glasses</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="http://localhost/Site-Opticien/femme%20lunettes.php">Women</a></li>
-                <li><a class="dropdown-item" href="#">Man</a></li>
+                <li><a class="dropdown-item" href="http://localhost/Site-Opticien/homme%20lunettes.php">Man</a></li>
                 <li><a class="dropdown-item" href="#">Kids</a></li>
               </ul> 
               <li class="nav-item dropdown">
@@ -195,7 +195,6 @@ div.desc {
 
         <div class="gallery">
             <img src="<?php echo $row["img"] ?>" alt="Cinque Terre">
-          </a>
           <div class="desc"><p><?php echo $row["titre"] ?></p>
           <p><?php echo $row["prix"] ?>dt</p>
         

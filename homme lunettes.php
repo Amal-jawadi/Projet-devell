@@ -1,3 +1,19 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "amal";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT * FROM lunetteh";
+$result = $conn->query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,15 +27,71 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
-<style>
+</head>
+<body>
+  <style>
+    h1 {
+  text-align: center;
+  font-size: 70px;
+  background-color: rgb(155, 134, 134);
+}       
+p {
+  text-align: center;
+  font-size: 20px;
+  color: #5e60f0;
+}     
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .footer-basic {
   padding:40px 0;
   background-color:#ffffff;
   color:hwb(213 62% 7% / 0.8);
 }
-
 .footer-basic ul {
   padding:0;
   list-style:none;
@@ -71,10 +143,10 @@
   color:hwb(213 62% 7% / 0.8);
   margin-bottom:0;
 }
-</style>
-<body>
-     
-<nav class="navbar navbar-expand-sm bg-light grey navbar-light grey">
+
+
+  </style>
+      <nav class="navbar navbar-expand-sm bg-light grey navbar-light grey">
       <div class="container-fluid">
         <img src="logo22.png" alt="Logo" style="width:90px;">
        
@@ -94,7 +166,7 @@
               <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Glasses</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="http://localhost/Site-Opticien/femme%20lunettes.php">Women</a></li>
-                <li><a class="dropdown-item" href="#">Man</a></li>
+                <li><a class="dropdown-item" href="http://localhost/Site-Opticien/homme%20lunettes.php">Man</a></li>
                 <li><a class="dropdown-item" href="#">Kids</a></li>
               </ul> 
               <li class="nav-item dropdown">
@@ -115,19 +187,56 @@
         </div>
       </div>
     </nav>
-    <div class="footer-basic">
-                <footer>
-                    <div class="social"><a href="https://www.snapchat.com/fr-FR"><i class="icon ion-social-snapchat"></i></a><a href="https://twitter.com/?lang=fr"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/HOME.html">Home</a></li>
-                        <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/femme.html">Services</a></li>
-                        <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/Log%20in1.html?">About</a></li>
-                    </ul>
-                    <p class="copyright">Jawadi EyeWear © 2023</p>
-                </footer>
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-            </body>
-            </html>
-            
+    <div class="responsive">
+    <?php 
+      if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) { ?>
+
+        <div class="gallery">
+            <img src="<?php echo $row["img"] ?>" alt="Cinque Terre">
+          <div class="desc"><p><?php echo $row["titre"] ?></p>
+          <p><?php echo $row["prix"] ?>dt</p>
+        
+        </div>
+        </div>
+        <?php    }
+      } else {
+        echo "0 results";
+      }
+      $conn->close();
+      ?>
+      </div>
+
+
+
+      <div class="clearfix"></div>
+   
+  <div class="footer-basic">
+    <footer>
+        <div class="social"><a href="https://www.snapchat.com/fr-FR"><i class="icon ion-social-snapchat"></i></a><a href="https://twitter.com/?lang=fr"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/HOME.html">Home</a></li>
+            <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/femme.html">Services</a></li>
+            <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/Log%20in1.html?">About</a></li>
+        </ul>
+        <p class="copyright">Jawadi EyeWear © 2023</p>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
+   
+
+
+
+
+
+
+
+

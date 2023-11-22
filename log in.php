@@ -94,7 +94,7 @@
               <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Glasses</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="http://localhost/Site-Opticien/femme%20lunettes.php">Women</a></li>
-                <li><a class="dropdown-item" href="#">Man</a></li>
+                <li><a class="dropdown-item" href="http://localhost/Site-Opticien/homme%20lunettes.php">Man</a></li>
                 <li><a class="dropdown-item" href="#">Kids</a></li>
               </ul> 
               <li class="nav-item dropdown">
