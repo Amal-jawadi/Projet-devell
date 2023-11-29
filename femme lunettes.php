@@ -187,27 +187,27 @@ div.desc {
         </div>
       </div>
     </nav>
-    <div class="responsive">
+
+    
     <?php 
       if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) { ?>
-        <div class="gallery">
+        <div class="responsive">
+          <div class="gallery">
             <img src="<?php echo $row["img"] ?>" alt="Cinque Terre">
-          <div class="desc"><p><?php echo $row["titre"] ?></p>
-          <p><?php echo $row["prix"] ?>dt</p>
-        
-        </div>
+              <div class="desc">
+                <p><?php echo $row["titre"] ?></p>
+                <p><?php echo $row["prix"] ?>dt</p>
+              </div>
+          </div>
         </div>
         <?php    }
       } else {
         echo "0 results";
       }
       $conn->close();
-      ?>
-      </div>
-
-
+    ?>
 
       <div class="clearfix"></div>
    
