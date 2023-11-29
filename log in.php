@@ -72,8 +72,8 @@
   margin-bottom:0;
 }
 </style>
-<body>
-     
+<body>  
+<b><?php echo $nom; ?></b>
 <nav class="navbar navbar-expand-sm bg-light grey navbar-light grey">
       <div class="container-fluid">
         <img src="logo22.png" alt="Logo" style="width:90px;">

@@ -192,7 +192,6 @@ div.desc {
       if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) { ?>
-
         <div class="gallery">
             <img src="<?php echo $row["img"] ?>" alt="Cinque Terre">
           <div class="desc"><p><?php echo $row["titre"] ?></p>
