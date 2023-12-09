@@ -72,8 +72,7 @@
   margin-bottom:0;
 }
 </style>
-<body>  
-<b><?php echo $nom; ?></b>
+<body> 
 <nav class="navbar navbar-expand-sm bg-light grey navbar-light grey">
       <div class="container-fluid">
         <img src="logo22.png" alt="Logo" style="width:90px;">
@@ -104,9 +103,6 @@
                   <li><a class="dropdown-item" href="#">Man</a></li>
                   <li><a class="dropdown-item" href="#">Kids</a></li>
                 </ul> 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Lentilles</a>
-                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Marques</a>
                   </li>

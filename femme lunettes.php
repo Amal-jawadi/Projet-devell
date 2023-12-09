@@ -175,10 +175,7 @@ div.desc {
                   <li><a class="dropdown-item" href="#">women</a></li>
                   <li><a class="dropdown-item" href="#">Man</a></li>
                   <li><a class="dropdown-item" href="#">Kids</a></li>
-                </ul> 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Lentilles</a>
-                  </li>
+                </ul>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Marques</a>
                   </li>

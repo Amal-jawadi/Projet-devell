@@ -12,9 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-</head>
-<body>
-  <style>
+<style>
 .footer-basic {
   padding:40px 0;
   background-color:#ffffff;
@@ -141,6 +139,8 @@
   margin: 5px 0;
 }
   </style>
+  <body>
+    <nav>
       <nav class="navbar navbar-expand-sm bg-light grey navbar-light grey">
       <div class="container-fluid">
         <img src="logo22.png" alt="Logo" style="width:90px;">
@@ -171,16 +171,13 @@
                   <li><a class="dropdown-item" href="#">Man</a></li>
                   <li><a class="dropdown-item" href="#">Kids</a></li>
                 </ul> 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Lentilles</a>
-                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Marques</a>
                   </li>
             </li>
           </ul>
         </div>
-      </div>
+        </div>
     </nav>
     <main>
       <div class="intro">
