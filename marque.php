@@ -1,19 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "amal";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-$sql = "SELECT * FROM sunfemme";
-$result = $conn->query($sql);
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +11,7 @@ $result = $conn->query($sql);
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="chemin/vers/le/slide.js"></script>
 </head>
 </head>
 <body>
@@ -143,7 +128,27 @@ div.desc {
   color:hwb(213 62% 7% / 0.8);
   margin-bottom:0;
 }
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
 
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
 
   </style>
       <nav class="navbar navbar-expand-sm bg-light grey navbar-light grey">
@@ -174,7 +179,7 @@ div.desc {
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20femme.php#">women</a></li>
                   <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20homme.php#">Man</a></li>
-                  <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20kids.php">Kids</a></li>
+                  <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20kids.php#">Kids</a></li>
                 </ul> 
                   <li class="nav-item">
                     <a class="nav-link" href="http://localhost/Site-Opticien/marque.php#">Marques</a>
@@ -184,31 +189,51 @@ div.desc {
         </div>
       </div>
     </nav>
-    <?php 
-      if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) { ?>
-        <div class="responsive">
-          <div class="gallery">
-            <img src="<?php echo $row["img"] ?>" alt="Cinque Terre">
-              <div class="desc">
-                <p><?php echo $row["nom"] ?></p>
-                <p><?php echo $row["prix"] ?>dt</p>
-              </div>
-          </div>
-        </div>
-        <?php    }
-      } else {
-        echo "0 results";
-      }
-      $conn->close();
-    ?>
-
-
+    
       <div class="clearfix"></div>
-   
-      <div class="clearfix"></div>
-   
+      <div class="clearfix">
+      </div>
+      <div class="row">
+  <div class="column">
+    <img src="rl.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="diol.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Parfois.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+<div class="clearfix"></div>
+      <div class="clearfix">
+      </div>
+      <div class="row">
+  <div class="column">
+    <img src="cl.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="pl.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="pol.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+<div class="clearfix"></div>
+      <div class="clearfix">
+      </div>
+      <div class="row">
+  <div class="column">
+    <img src="ml.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="cccl.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="al.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
   <div class="footer-basic">
     <footer>
         <div class="social"><a href="https://www.snapchat.com/fr-FR"><i class="icon ion-social-snapchat"></i></a><a href="https://twitter.com/?lang=fr"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
@@ -229,6 +254,10 @@ div.desc {
 
 
    
+
+
+
+
 
 
 

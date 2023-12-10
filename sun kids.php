@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT * FROM sunfemme";
+$sql = "SELECT * FROM sunkk";
 $result = $conn->query($sql);
 
 ?>
@@ -174,10 +174,10 @@ div.desc {
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20femme.php#">women</a></li>
                   <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20homme.php#">Man</a></li>
-                  <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20kids.php#">Kids</a></li>
+                  <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20kids.php">Kids</a></li>
                 </ul> 
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Marques</a>
+                    <a class="nav-link" href="http://localhost/Site-Opticien/marque.php#">Marques</a>
                   </li>
             </li>
           </ul>

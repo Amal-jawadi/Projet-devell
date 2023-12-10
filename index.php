@@ -172,7 +172,7 @@
                   <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20kids.php#">Kids</a></li>
                 </ul> 
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Marques</a>
+                    <a class="nav-link" href="http://localhost/Site-Opticien/marque.php#">Marques</a>
                   </li>
             </li>
           </ul>
