@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT * FROM lunetteh";
+$sql = "SELECT * FROM sunhomme";
 $result = $conn->query($sql);
 
 ?>
@@ -172,7 +172,7 @@ div.desc {
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Sunglasses</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">women</a></li>
+                  <li><a class="dropdown-item" href="">women</a></li>
                   <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20homme.php#">Man</a></li>
                   <li><a class="dropdown-item" href="#">Kids</a></li>
                 </ul> 
@@ -192,7 +192,7 @@ div.desc {
           <div class="gallery">
             <img src="<?php echo $row["img"] ?>" alt="Cinque Terre">
               <div class="desc">
-                <p><?php echo $row["titre"] ?></p>
+                <p><?php echo $row["nom"] ?></p>
                 <p><?php echo $row["prix"] ?>dt</p>
               </div>
           </div>
@@ -228,10 +228,6 @@ div.desc {
 
 
    
-
-
-
-
 
 
 
