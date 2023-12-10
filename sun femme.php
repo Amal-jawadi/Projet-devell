@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT * FROM lunettesf";
+$sql = "SELECT * FROM sunfemme";
 $result = $conn->query($sql);
 
 ?>
@@ -174,8 +174,8 @@ div.desc {
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20femme.php#">women</a></li>
                   <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20homme.php#">Man</a></li>
-                  <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20kids.php#">Kids</a></li>
-                </ul>
+                  <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20kids.php">Kids</a></li>
+                </ul> 
                   <li class="nav-item">
                     <a class="nav-link" href="#">Marques</a>
                   </li>
@@ -184,8 +184,6 @@ div.desc {
         </div>
       </div>
     </nav>
-
-    
     <?php 
       if ($result->num_rows > 0) {
         // output data of each row
@@ -194,7 +192,7 @@ div.desc {
           <div class="gallery">
             <img src="<?php echo $row["img"] ?>" alt="Cinque Terre">
               <div class="desc">
-                <p><?php echo $row["titre"] ?></p>
+                <p><?php echo $row["nom"] ?></p>
                 <p><?php echo $row["prix"] ?>dt</p>
               </div>
           </div>
@@ -206,6 +204,8 @@ div.desc {
       $conn->close();
     ?>
 
+      <div class="clearfix"></div>
+   
       <div class="clearfix"></div>
    
   <div class="footer-basic">
@@ -228,10 +228,6 @@ div.desc {
 
 
    
-
-
-
-
 
 
 

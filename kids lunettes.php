@@ -172,9 +172,9 @@ div.desc {
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Sunglasses</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">women</a></li>
+                  <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20femme.php#">women</a></li>
                   <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20homme.php#">Man</a></li>
-                  <li><a class="dropdown-item" href="#">Kids</a></li>
+                  <li><a class="dropdown-item" href="http://localhost/Site-Opticien/sun%20kids.php#">Kids</a></li>
                 </ul> 
                   <li class="nav-item">
                     <a class="nav-link" href="#">Marques</a>
