@@ -1,12 +1,6 @@
-<?php
-include_once("connect.php");
-$sql = "SELECT * FROM lunettek";
-$result = $conn->query($sql);
-
-?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="utf-8">
   <title>Jawadi Optique</title>
   <link rel="icon" href="logo22.png" type="image/icon type">
@@ -17,71 +11,14 @@ $result = $conn->query($sql);
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-</head>
-</head>
-<body>
+  </head>
   <style>
-    h1 {
-  text-align: center;
-  font-size: 70px;
-  background-color: rgb(155, 134, 134);
-}       
-p {
-  text-align: center;
-  font-size: 20px;
-  color: #5e60f0;
-}     
-div.gallery {
-  border: 1px solid #ccc;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.footer-basic {
+  .footer-basic {
   padding:40px 0;
   background-color:#ffffff;
   color:hwb(213 62% 7% / 0.8);
 }
+
 .footer-basic ul {
   padding:0;
   list-style:none;
@@ -134,8 +71,25 @@ div.desc {
   margin-bottom:0;
 }
 
+    .container {
+ display: grid;
+ align-items: center; 
+ grid-template-columns: 1fr 1fr 1fr;
+ column-gap: 5px;
+}
 
-  </style>
+img {
+  max-width: 100%;
+  max-height:100%;
+}
+
+.text {
+  font-size: 40px;
+  color:#5e60f0 ;
+}
+    </style>
+  <body>
+  <nav>
       <nav class="navbar navbar-expand-sm bg-light grey navbar-light grey">
       <div class="container-fluid">
         <img src="logo22.png" alt="Logo" style="width:90px;">
@@ -172,38 +126,37 @@ div.desc {
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
-    <?php 
-      if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) { ?>
-        <div class="responsive">
-          <div class="gallery">
-            <img src="<?php echo $row["img"] ?>" alt="Cinque Terre">
-              <div class="desc">
-                <p><?php echo $row["titre"] ?></p>
-                <p><?php echo $row["prix"] ?>dt</p>
-              </div>
-          </div>
         </div>
-        <?php    }
-      } else {
-        echo "0 results";
-      }
-      $conn->close();
-    ?>
-
-      <div class="clearfix"></div>
-   
-      <div class="clearfix">
+    </nav>
+    <div class="container">
+      <div class="image">
+        <img src="about1.jpg">
       </div>
-   
-  <div class="footer-basic">
+      <div class="text">
+        <h3>We are working with a lots of successful partners like Chanel, Christian Dior,Gucci.</p></h3>
+      </div>
+    </div>
+    <div class="container">
+      <div class="image">
+        <img src="about2.jpg">
+      </div>
+      <div class="text">
+        <h3>we have a lot of skills and we are very good at them.Like precise lens fitting and adjustments also prescription glasses and contact lenses.</h3>
+      </div>
+    </div>
+    <div class="container">
+      <div class="image">
+        <img src="about3.jpg">
+      </div>
+      <div class="text">
+        <h3>We are open in " Sousse and Sfax".</h3>
+      </div>
+    </div>
+    <div class="footer-basic">
     <footer>
         <div class="social"><a href="https://www.snapchat.com/fr-FR"><i class="icon ion-social-snapchat"></i></a><a href="https://twitter.com/?lang=fr"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
         <ul class="list-inline">
-            <li class="list-inline-item"><a href="http://localhost/Site-Opticien/index.php">Home</a></li>
+        <li class="list-inline-item"><a href="http://localhost/Site-Opticien/index.php">Home</a></li>
             <li class="list-inline-item"><a href="http://localhost/Site-Opticien/log%20in.php">Log In</a></li>
             <li class="list-inline-item"><a href="http://localhost/Site-Opticien/about.php">About</a></li>
         </ul>
@@ -212,18 +165,5 @@ div.desc {
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-
-</body>
+  </body>
 </html>
-
-
-
-   
-
-
-
-
-
-
-
-

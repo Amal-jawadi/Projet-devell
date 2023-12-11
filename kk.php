@@ -180,8 +180,8 @@ button:hover {
         </div>
       </div>
     </nav>
-     <!-- Section: Design Block -->
-     <form action="kk.php" method="post">
+    <!-- Section: Design Block -->
+    <form action="kk.php" method="post">
     <div class="imgcontainer">
     <img src="hh.jpg" alt="Avatar" class="avatar">
   </div>
@@ -194,7 +194,6 @@ button:hover {
     <input type="password" placeholder="Enter Password" name="password" required>
 
     <button type="submit">Login</button>
-    
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
@@ -203,18 +202,14 @@ button:hover {
   </div>
 </form>
 
-    </div>
-                  </div>
-                </div>
-
               <!-- Section: Design Block -->
               <div class="footer-basic">
                 <footer>
                     <div class="social"><a href="https://www.snapchat.com/fr-FR"><i class="icon ion-social-snapchat"></i></a><a href="https://twitter.com/?lang=fr"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
                     <ul class="list-inline">
-                    <li class="list-inline-item"><a href="http://localhost/Site-Opticien/index.php">Home</a></li>
-            <li class="list-inline-item"><a href="http://localhost/Site-Opticien/log%20in.php">Log In</a></li>
-            <li class="list-inline-item"><a href="http://localhost/Site-Opticien/about.php">About</a></li>
+                        <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/HOME.html">Home</a></li>
+                        <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/femme.html">Services</a></li>
+                        <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/Log%20in1.html?">About</a></li>
                     </ul>
                     <p class="copyright">Jawadi EyeWear © 2023</p>
                 </footer>

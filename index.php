@@ -112,32 +112,6 @@
   cursor: pointer;
   box-shadow: 0px 0px 20px rgb(209, 201, 201)
 }
-.achievements {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 40px 80px;
-}
-
-.achievements .work {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 40px;
-}
-.achievements .work .work-heading {
-  font-size: 20px;
-  color:#44546a;
-  text-transform: uppercase;
-  margin: 5px 0;
-}
-
-.achievements .work .work-text {
-  font-size: 25px;
-  color: #968fe6;
-  margin: 5px 0;
-}
   </style>
   <body>
     <nav>
@@ -182,20 +156,9 @@
     <main>
       <div class="intro">
         <h1>Jawadi Eyewear</h1>
-        <p> Our optical center, we want to be close to you and best meet your needs. In all regions of Tunisia, we open the door of our stores to you  .</p>
-        <button>Learn More</button>
+        <p> Our optical center, we want to be close to you and best meet your needs, we open the door of our stores to you.</p>
+        <button><a href="http://localhost/Site-Opticien/about.php">Learn More</a></button>
       </div>
-      <div class="achievements">
-        <div class="work">
-          <i class="fas fa-atom"></i>
-          <p class="work-heading">Projects</p>
-          <p class="work-text">We are working with a lots of successful partners like Chanel, Christian Dior,Gucci.</p>
-        </div>
-        <div class="work">
-          <i class="fas fa-skiing"></i>
-          <p class="work-heading">Skills</p>
-          <p class="work-text">we have a lot of skills and we are very good at them.Like precise lens fitting and adjustments also prescription glasses and contact lenses.</p>
-        </div>
       </div>
       </div>
     </main>
@@ -204,9 +167,9 @@
     <footer>
         <div class="social"><a href="https://www.snapchat.com/fr-FR"><i class="icon ion-social-snapchat"></i></a><a href="https://twitter.com/?lang=fr"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
         <ul class="list-inline">
-            <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/HOME.html">Home</a></li>
-            <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/femme.html">Services</a></li>
-            <li class="list-inline-item"><a href="file:///C:/Users/lenovo/Desktop/Projet%20mini%20projet/Log%20in1.html?">About</a></li>
+        <li class="list-inline-item"><a href="http://localhost/Site-Opticien/index.php">Home</a></li>
+            <li class="list-inline-item"><a href="http://localhost/Site-Opticien/log%20in.php">Log In</a></li>
+            <li class="list-inline-item"><a href="http://localhost/Site-Opticien/about.php">About</a></li>
         </ul>
         <p class="copyright">Jawadi EyeWear © 2023</p>
     </footer>
