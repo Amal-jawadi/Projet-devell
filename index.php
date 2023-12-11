@@ -16,7 +16,7 @@
 .footer-basic {
   padding:40px 0;
   background-color:#ffffff;
-  color:hwb(213 62% 7% / 0.8);
+  color:#004AAD;
 }
 
 .footer-basic ul {
@@ -55,7 +55,7 @@
   display:inline-block;
   text-align:center;
   border-radius:50%;
-  border:1px solid hwb(213 62% 7% / 0.8);
+  border:1px solid #004AAD;
   margin:0 8px;
   color:inherit;
   opacity:0.75;
@@ -67,7 +67,7 @@
 
 .footer-basic .copyright {text-align:center;
   font-size:13px;
-  color:hwb(213 62% 7% / 0.8);
+  color:#004AAD;
   margin-bottom:0;
 }
 
@@ -96,7 +96,7 @@
 
 .intro p {
   font-size: 20px;
-  color:#5e60f0 ;
+  color:#FFFFFF ;
   text-transform: uppercase;
   margin: 20px 0;
 }
