@@ -1,17 +1,22 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "amal";
+if (isset($_POST) && $_POST){
+include_once("connect.php");
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+$sql = "INSERT INTO `search` (`id`, `search`) 
+VALUES ('" . $_POST['id'] . "', '" . $_POST['search'] . "');";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
+$conn->close();
 $sql = "SELECT * FROM lunettesf";
 $result = $conn->query($sql);
+}
+
+
 
 ?>
 <!DOCTYPE html>
@@ -179,6 +184,11 @@ div.desc {
                   <li class="nav-item">
                     <a class="nav-link" href="http://localhost/Site-Opticien/marque.php#">Marques</a>
                   </li>
+                  <form  action="/Site-Opticien/femme lunettes.php" method="post">
+                  <label for="search"></label>
+        <input id="search" name="search" type="text">
+        <br/>  <input type="submit" value="submit">
+</form>
             </li>
           </ul>
         </div>
@@ -186,10 +196,8 @@ div.desc {
     </nav>
 
     
-    <?php 
-      if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) { ?>
+ 
+      
         <div class="responsive">
           <div class="gallery">
             <img src="<?php echo $row["img"] ?>" alt="Cinque Terre">
@@ -199,13 +207,7 @@ div.desc {
               </div>
           </div>
         </div>
-        <?php    }
-      } else {
-        echo "0 results";
-      }
-      $conn->close();
-    ?>
-
+        
       <div class="clearfix"></div>
    
   <div class="footer-basic">

@@ -1,3 +1,29 @@
+<?php
+   
+   if (isset($_POST) && $_POST){
+    include_once("connect.php");
+    
+    $sql = "SELECT `email`,'password' FROM `user` WHERE `email` = '" . $_POST['email']. "' and `password` = '" . $_POST['password'] . "';";
+    $result = $conn->query($sql);
+    if (mysqli_num_rows($result) == 0){
+        echo "User not found: Check your credentail";
+    }else{
+        $user = mysqli_fetch_assoc($result);
+
+        session_start();
+        // Set session variables
+       
+        $_SESSION["email"] = $user['email'];
+        $_SESSION["password"] = $user['password'];
+
+        header('Location: /Site-Opticien/index.php');
+        die;
+    }
+    $conn->close();
+}
+        
+        
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,72 +138,28 @@
       </div>
     </nav>
     <!-- Section: Design Block -->
-
-              <section class="text-center">
-                <!-- Background image -->
-                <div class="p-5 bg-image" style="
-                      background-image: url('01111118.jpg');
-                      height: 300px;
-                      ">
-                      </div>
-                <!-- Background image -->
-              
-                <div class="card mx-4 mx-md-5 shadow-5-strong" style="
-                      margin-top: -100px;
-                      background:hsla(0, 0%, 100%, 0.8);;
-                      backdrop-filter: blur(30px);
-                      ">
-                  <div class="card-body py-5 px-md-5">
+    <div class="card-body py-5 px-md-5">
                     <div class="row d-flex justify-content-center">
                       <div class="col-lg-8">
-                        <h2 class="fw-bold mb-5">Sign up Now</h2>
-                        <form>
-                          <!-- 2 column grid layout with text inputs for the first and last names -->
-                          <div class="row">
-                            <div class="col-md-6 mb-4">
-                              <div class="form-outline">
-                                <input type="text" id="form3Example1" class="form-control" />
-                                <label class="form-label" for="form3Example1">First name</label>
-                              </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                              <div class="form-outline">
-                                <input type="text" id="form3Example2" class="form-control" />
-                                <label class="form-label" for="form3Example2">Last name</label>
-                              </div>
-                            </div>
-                          </div>
-              
-                          <!-- Email input -->
-                          <div class="form-outline mb-4">
-                            <input type="email" id="form3Example3" class="form-control" />
-                            <label class="form-label" for="form3Example3">Email address</label>
-                          </div>
-              
-                          <!-- Password input -->
-                          <div class="form-outline mb-4">
-                            <input type="password" id="form3Example4" class="form-control" />
-                            <label class="form-label" for="form3Example4">Password</label>
-                          </div>
-              
-                          <!-- Checkbox -->
-                          <div class="form-check d-flex justify-content-center mb-4">
-                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                            <label class="form-check-label" for="form2Example33">
-                              Subscribe to our newsletter
-                            </label>
-                          </div>
-              
-                          <!-- Submit button -->
-                          <button type="submit" class="btn btn-primary btn-block mb-4">
-                            Sign up
-                          </button>
-                        </form>
-                      </div>
-                    </div>
+                        <h2 class="fw-bold mb-5">Log In</h2>
+    <form method="post">
+    <div class="form-outline mb-4">
+
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <br>
+</div>
+<div class="form-outline mb-4">
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+        <br>
+</div>
+        <input type="submit" value="Login">
+    </form>
+    </div>
                   </div>
                 </div>
-              </section>
+
               <!-- Section: Design Block -->
               <div class="footer-basic">
                 <footer>
