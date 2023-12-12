@@ -1,24 +1,18 @@
-<?php
-if (isset($_POST) && $_POST){
-include_once("connect.php");
-
-$sql = "INSERT INTO `search` (`id`, `search`) 
-VALUES ('" . $_POST['id'] . "', '" . $_POST['search'] . "');";
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+<?php 
+   include("connect.php");
+$search = '';
+if (isset($_GET) && $_GET && $_GET['search']){
+    $search = $_GET['search'];
+    $sql = "SELECT * FROM lunettesf WHERE titre LIKE '%" . $_GET['search'] . "%' or titre LIKE '%" . $_GET['search'] . "%';";
+}else {
+    $sql = "SELECT * FROM lunettesf";
 }
 
-$conn->close();
-$sql = "SELECT * FROM lunettesf";
-$result = $conn->query($sql);
-}
-
-
-
+  $result = $conn->query($sql);
+  $conn->close();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -184,11 +178,11 @@ div.desc {
                   <li class="nav-item">
                     <a class="nav-link" href="http://localhost/Site-Opticien/marque.php#">Marques</a>
                   </li>
-                  <form  action="/Site-Opticien/femme lunettes.php" method="post">
-                  <label for="search"></label>
-        <input id="search" name="search" type="text">
-        <br/>  <input type="submit" value="submit">
-</form>
+        
+<form>
+       <input type="text" name="search" id="search" placeholder="Search" value="<?= $search ?>">
+       <input type="submit" value="Search"/>
+   </form>
             </li>
           </ul>
         </div>
@@ -197,7 +191,10 @@ div.desc {
 
     
  
-      
+    <?php 
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) { ?>
         <div class="responsive">
           <div class="gallery">
             <img src="<?php echo $row["img"] ?>" alt="Cinque Terre">
@@ -207,7 +204,11 @@ div.desc {
               </div>
           </div>
         </div>
-        
+        <?php }
+            } else {
+                echo "0 results";
+            }
+        ?>
       <div class="clearfix"></div>
    
   <div class="footer-basic">

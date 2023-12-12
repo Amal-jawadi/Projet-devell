@@ -16,7 +16,8 @@
 .footer-basic {
   padding:40px 0;
   background-color:#ffffff;
-  color:#004AAD;
+  color:#004AAD
+  ;
 }
 
 .footer-basic ul {
